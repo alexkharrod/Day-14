@@ -45,7 +45,15 @@ def main():
         # ask the player if they want to hit and calculate the winner
         print(f"The Dealers is showing: {dealer_hand[0]}.")
         player_play(player=player_hand, dealer=dealer_hand)
-        # dealer_play(player_hand, dealer_hand)
+        dealer_play(player=player_hand, dealer=dealer_hand)
+        if sum(player_hand) > sum(dealer_hand) and sum(player_hand) < 22 and sum(dealer_hand) < 22:
+           print("Player wins")
+        elif sum(player_hand) < sum(dealer_hand) and sum(dealer_hand) < 22 and sum(player_hand) < 22:
+           print("Dealer Wins")
+        else:
+            print("It's a draw!")
+        print(f"Player's hand: {player_hand} and total: {sum(player_hand)}\n"
+              f"Dealer's hand: {dealer_hand} and total: {sum(dealer_hand)}")
 
 
 def player_play(player, dealer):
@@ -59,35 +67,39 @@ def player_play(player, dealer):
             if sum(player) > 21 and 11 not in player:
                 print(f"You Busted with {(player)}  with a total of {sum(player)}\n"
                       f" Dealer Wins with {len(dealer)} cards and a total score of {sum(dealer)}!")
+                exit()
                 player_turn = False
             elif sum(player) > 21 and 11 in player:
-                print("cards 11  or 1 value triggered")
                 for index in range(len(player)):
                     if player[index] == 11:
                         player[index] = 1
-                        print(player)
+                        print("Counting your Aces as 1 instead of 11!")
+             #need to end game as well
 
-                #need to end game as well
-            else:
-                print(f"The Dealers showing card is {dealer[0]}.")
         elif hitme == 'n':
             player_turn = False
         # make the game end if you BUST
 
-    # if sum(player) > 21 and 11 not in player:
-    #     print(f"You Busted.  You Lost.  Your hand is: {player} and the total is {sum(player)}.")
-    #     game_over = True
-    #
-    # elif sum(player) > 21 and 11 in player:
-    #     for index in range(len(player)):
-    #         if player[index] == 11:
-    #             player[index] = [1]
 
-# def dealer_play(player, dealer):
-#     dealer_turn = True
-#     while dealer_turn:
-#         if sum(dealer) < 17:
-#             hit(dealer_hand)
+def dealer_play(player, dealer):
+    while sum(dealer) < 17:
+        dealer.append(random.choice(cards))
+        if sum(dealer) > 21 and 11 not in dealer:
+            print(f"Dealer Busted with {dealer}  with a total of {sum(dealer)}\n"
+                  f" You  Win with {len(player)} cards and a total score of {sum(player)}!")
+
+            exit()
+        elif sum(dealer) > 21 and 11 in dealer:
+            for index in range(len(dealer)):
+                if dealer[index] == 11:
+                    dealer[index] = 1
+                    print("Counting Dealers Aces as 1 instead of 11!")
+        else:
+            dealer_turn = False
+
+
+
+
 
 
         #end the game if dealer busts
