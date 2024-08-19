@@ -23,33 +23,29 @@ def main():
     """ This is the main game loop that runs the game. deals original hand, and checks for blackjack"""
     print(art.logo)
     print("Welcome to BLACKJACK!")
-    game_over = False
-    while game_over == False:
-        for deal in range(2):
-            #deal the cards
-            dealer_hand.append(random.choice(cards))
-            player_hand.append(random.choice(cards))
+    # game_over = False
+    # while game_over == False:
+    for deal in range(2):
+        #deal the cards
+        dealer_hand.append(random.choice(cards))
+        player_hand.append(random.choice(cards))
 
-        # if dealer has black jack dealer wins
-        if sum(dealer_hand) == 21 and len(dealer_hand) == 2:
-            print(f"Dealer WINS!  BlackJack!")
-            print(f"The Dealer's hand is : {dealer_hand}, which equals {len(dealer_hand)}")
-            print(f"Your hand was {player_hand}, total score {sum(player_hand)}")
+    # if dealer has black jack dealer wins
+    if sum(dealer_hand) == 21 and len(dealer_hand) == 2:
+        print(f"Dealer WINS!  BlackJack!")
+        print(f"The Dealer's hand is : {dealer_hand}, which equals {sum(dealer_hand)}")
+        print(f"Your hand was {player_hand}, total score {sum(player_hand)}")
 
-        #if dealer doesnt have 21 but player does, player wins.
-        elif sum(dealer_hand) < 21 and sum(player_hand) == 21:
-            print(f"BlackJack! YOU WIN!")
-            print(f"The Dealers hand was {dealer_hand}")
-            print(f"Your hand was {player_hand}, total score {sum(player_hand)}")
-        else:
-            # ask the player if they want to hit and calculate the winner
-            print(f"The Dealers showing card is {dealer_hand[0]}.")
-            player_play(player=player_hand, dealer=dealer_hand)
-            # dealer_play(player_hand, dealer_hand)
-
-
-# def hit(hand):
-#     hand.append(random.choice(cards))
+    #if dealer doesnt have 21 but player does, player wins.
+    elif sum(dealer_hand) < 21 and sum(player_hand) == 21:
+        print(f"BlackJack! YOU WIN!")
+        print(f"The Dealers hand was {dealer_hand}")
+        print(f"Your hand was {player_hand}, total score {sum(player_hand)}")
+    else:
+        # ask the player if they want to hit and calculate the winner
+        print(f"The Dealers is showing: {dealer_hand[0]}.")
+        player_play(player=player_hand, dealer=dealer_hand)
+        # dealer_play(player_hand, dealer_hand)
 
 
 def player_play(player, dealer):
@@ -57,12 +53,27 @@ def player_play(player, dealer):
     player_turn = True
     while player_turn:
         hitme = input(f"Your cards are {player}, and your total is {sum(player)}\nDo you want to hit?  'y' for yes,"
-                    f" 'n' for no.").title()
+                    f" 'n' for no.\n").lower()
         if hitme == 'y':
             player.append(random.choice(cards))
-            print(f"The Dealers showing card is {dealer[0]}.")
+            if sum(player) > 21 and 11 not in player:
+                print(f"You Busted with {(player)}  with a total of {sum(player)}\n"
+                      f" Dealer Wins with {len(dealer)} cards and a total score of {sum(dealer)}!")
+                player_turn = False
+            elif sum(player) > 21 and 11 in player:
+                print("cards 11  or 1 value triggered")
+                for index in range(len(player)):
+                    if player[index] == 11:
+                        player[index] = 1
+                        print(player)
+
+                #need to end game as well
+            else:
+                print(f"The Dealers showing card is {dealer[0]}.")
         elif hitme == 'n':
             player_turn = False
+        # make the game end if you BUST
+
     # if sum(player) > 21 and 11 not in player:
     #     print(f"You Busted.  You Lost.  Your hand is: {player} and the total is {sum(player)}.")
     #     game_over = True
