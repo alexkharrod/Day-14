@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fdb2165b-c8a6-40be-bafd-e7363329465a" name="Changes" comment="Free at last???">
+      <change afterPath="$PROJECT_DIR$/.idea/My Projects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alexkharrod&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/alexkharrod/blackjack.git&quot;,
+    &quot;accountId&quot;: &quot;f9542a12-c8e0-47c2-91dc-74ae4546834e&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ksKvIleTko3oLFh8aP8Yswt6tf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Test",
+    "last_opened_file_path": "/Users/alexharrod/Documents/PycharmProjects/My Projects",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-8336bb23522e-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.19072.16" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdb2165b-c8a6-40be-bafd-e7363329465a" name="Changes" comment="" />
+      <created>1724067073042</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724067073042</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Moving the project to my pycharm folders for git">
+      <option name="closed" value="true" />
+      <created>1724067948632</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724067948632</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Moving the project to my pycharm folders for git&#10;Got player hand working complete with 11 - 1 logic">
+      <option name="closed" value="true" />
+      <created>1724088234402</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724088234402</updated>
+    </task>
+    <task id="LOCAL-00003" summary="The whole thing works i just need to add a game loop and give user option to play again and clear screen">
+      <option name="closed" value="true" />
+      <created>1724106090862</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724106090862</updated>
+    </task>
+    <task id="LOCAL-00004" summary="All finished with base version and everything seems to work.">
+      <option name="closed" value="true" />
+      <created>1724108114804</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724108114804</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Replaced exit() with proper return and zero hands at begininning of main for next game">
+      <option name="closed" value="true" />
+      <created>1724153231829</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724153231829</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Finished - random error with game not stopping - game_on variable doesnt effect according to pycharm">
+      <option name="closed" value="true" />
+      <created>1724160403942</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724160403942</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated highlighting errors">
+      <option name="closed" value="true" />
+      <created>1724160546020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724160546020</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated highlighting errors">
+      <option name="closed" value="true" />
+      <created>1724160574837</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724160574837</updated>
+    </task>
+    <task id="LOCAL-00009" summary="finished test version moved loop out of main to actual code.">
+      <option name="closed" value="true" />
+      <created>1724162431225</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724162431225</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Free at last???">
+      <option name="closed" value="true" />
+      <created>1724163987691</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724163987691</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Moving the project to my pycharm folders for git" />
+    <MESSAGE value="Moving the project to my pycharm folders for git&#10;Got player hand working complete with 11 - 1 logic" />
+    <MESSAGE value="The whole thing works i just need to add a game loop and give user option to play again and clear screen" />
+    <MESSAGE value="All finished with base version and everything seems to work." />
+    <MESSAGE value="Replaced exit() with proper return and zero hands at begininning of main for next game" />
+    <MESSAGE value="Finished - random error with game not stopping - game_on variable doesnt effect according to pycharm" />
+    <MESSAGE value="updated highlighting errors" />
+    <MESSAGE value="finished test version moved loop out of main to actual code." />
+    <MESSAGE value="Free at last???" />
+    <option name="LAST_COMMIT_MESSAGE" value="Free at last???" />
+  </component>
+</project>
