@@ -34,15 +34,15 @@ def main():
     else:
         # ask the player if they want to hit and calculate the winner
         print(f"The Dealer is showing: {dealer_hand[0]}.")
-        player_play(player=player_hand, dealer=dealer_hand)
+        player_play(player=player_hand)
         if sum(player_hand) < 22:
-            dealer_play(player=player_hand, dealer=dealer_hand)
+            dealer_play(dealer=dealer_hand)
 
         if sum(player_hand) < 22 and sum(dealer_hand) < 22:
             if sum(player_hand) == sum(dealer_hand):
                 print("It's a draw!")
             elif sum(player_hand) > sum(dealer_hand):
-                print("Player wins")
+                print("You win")
             elif sum(player_hand) < sum(dealer_hand):
                 print("Dealer Wins")
 
@@ -50,26 +50,25 @@ def main():
           f"Dealer's hand: {dealer_hand} and total: {sum(dealer_hand)}")
 
 
-def player_play(player, dealer):
+def player_play(player):
     """ this function asks if you want to hit and shows your cards and the dealer showing card and calculates winner"""
-    player_turn = True
-    while player_turn:
+    while True:
         hit_me = input(f"Your cards are {player}, and your total is {sum(player)}\nDo you want to hit?  'y' for yes,"
                        f" 'n' for no.\n").lower()
         if hit_me == 'y':
             player.append(random.choice(cards))
             if sum(player) > 21 and 11 not in player:
                 print(f"You Busted, Dealer Wins!")
-                return
+                break
 
             elif sum(player) > 21 and 11 in player:
                 handle_aces(player)
 
         elif hit_me == 'n':
-            player_turn = False
+            break
 
 
-def dealer_play(player, dealer):
+def dealer_play(dealer):
     while sum(dealer) < 17:
         dealer.append(random.choice(cards))
         if sum(dealer) > 21 and 11 not in dealer:
@@ -83,7 +82,7 @@ def handle_aces(whose_hand):
     for index in range(len(whose_hand)):
         if whose_hand[index] == 11:
             whose_hand[index] = 1
-        print(f"Counted {whose_hand} Aces as 1 instead of 11!")
+    print(f"Counted Aces as 1 instead of 11!")
 
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
