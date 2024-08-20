@@ -7,6 +7,8 @@ def main():
     """ This is the main game loop that runs the game. deals original hand, and checks for blackjack"""
     print(art.logo)
     print("Welcome to BLACKJACK!")
+    dealer_hand = []
+    player_hand = []
     game_on = True
     while game_on:
         for deal in range(2):
@@ -57,7 +59,7 @@ def player_play(player, dealer):
             if sum(player) > 21 and 11 not in player:
                 print(f"You Busted with {(player)}  with a total of {sum(player)}\n"
                       f" Dealer Wins with {len(dealer)} cards and a total score of {sum(dealer)}!")
-                exit()
+                return
 
             elif sum(player) > 21 and 11 in player:
                 for index in range(len(player)):
@@ -78,7 +80,7 @@ def dealer_play(player, dealer):
             print(f"Dealer Busted with {dealer}  with a total of {sum(dealer)}\n"
                   f" You  Win with {len(player)} cards and a total score of {sum(player)}!")
 
-            exit()
+            return
         elif sum(dealer) > 21 and 11 in dealer:
             for index in range(len(dealer)):
                 if dealer[index] == 11:
